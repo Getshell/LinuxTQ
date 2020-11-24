@@ -17,6 +17,8 @@
 
 ## 五、Linux提权利用工具
 
-## 六、Linux提权参考资料
+## 六、Linux提权环境靶场
+
+## 七、Linux提权参考资料
 
 - http://www.0e0w.com
