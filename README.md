@@ -1,30 +1,29 @@
 # Linux提权
-本项目用来记录自己在Linux提权过程中遇到的一些内容，包括提权方法提权工具等。Linux提权在后渗透过程中也较为重要，因为我们将会在此仓库持续更新Linux提权的相关内容！作者：[0e0w](https://github.com/0e0w)
+本项目用来记录自己在Linux提权过程中遇到的一些内容，包括提权方法提权工具等。Linux提权在后渗透过程中也较为重要，因为我们将会在此仓库持续更新Linux提权的相关内容！**提权有风险，提权需谨慎。不到非提不可的情况下千万不要尝试提权！**作者：[0e0w](https://github.com/0e0w)
 
 本项目创建于2020年9月29日，最近的一次更新时间为2022年2月19日。
 
-- [01-Linux提权基础知识]()
-- [02-Linux内核漏洞提权]()
-- [03-Linux其他提权方法]()
-- [04-Linux提权利用工具]()
-- [05-Linux免杀高级提权]()
-- [06-Linux内核高级后门]()
-- [07-Linux提权环境靶场]()
-- [08-Linux提权参考资料]()
+- [01-Linux提权基础知识](https://github.com/Getshell/LinuxTQ#01-linux%E6%8F%90%E6%9D%83%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
+- [02-Linux内核漏洞提权](https://github.com/Getshell/LinuxTQ#02-linux%E5%86%85%E6%A0%B8%E6%BC%8F%E6%B4%9E%E6%8F%90%E6%9D%83)
+- [03-Linux其他提权方法](https://github.com/Getshell/LinuxTQ#03-linux%E5%85%B6%E4%BB%96%E6%8F%90%E6%9D%83%E6%96%B9%E6%B3%95)
+- [04-Linux提权利用工具](https://github.com/Getshell/LinuxTQ#04-linux%E6%8F%90%E6%9D%83%E5%88%A9%E7%94%A8%E5%B7%A5%E5%85%B7)
+- [05-Linux免杀高级提权](https://github.com/Getshell/LinuxTQ#05-linux%E5%85%8D%E6%9D%80%E9%AB%98%E7%BA%A7%E6%8F%90%E6%9D%83)
+- [06-Linux内核高级后门](https://github.com/Getshell/LinuxTQ#06-linux%E5%86%85%E6%A0%B8%E9%AB%98%E7%BA%A7%E5%90%8E%E9%97%A8)
+- [07-Linux提权环境靶场](https://github.com/Getshell/LinuxTQ#07-linux%E6%8F%90%E6%9D%83%E7%8E%AF%E5%A2%83%E9%9D%B6%E5%9C%BA)
+- [08-Linux提权参考资料](https://github.com/Getshell/LinuxTQ#08-linux%E6%8F%90%E6%9D%83%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
 
 ## 01-Linux提权基础知识
 
 本部分介绍Linux的一些基础内容。包括Linux的基础使用、相关发行版本以及Linux提权的相关概念等。
 
 **一、Linux命令基础**
-
 - https://github.com/0e0w/Linux
 
 **二、Linux用户权限**
 
 在Linux中一个文件有3种权限。对文件而言用户有3种不同类型：文件所有者、群组用户、其他用户。chmod 777中，三个数字7分别对应上面三种用户，权限值都为7。
 
-- 文件权限
+- 文件权限：
   - r 只读
   - w 只写
   - x 执行
@@ -44,23 +43,13 @@ Linux内核的版本号命名是有一定规则的，版本号的格式通常为
 
 现在存在成千上万个Linux的发行版本。
 
-- Arch系列
-  - Arch
-  - Manjaro
+- Arch系列：Arch、Manjaro
 
-- RedHat系列
-  - RedHat
-  - CentOS
-  - Fedora
+- RedHat系列：RedHat、CentOS、Fedora
 
-- Debian系列
-  - Debian
-  - Ubuntu
-  - Deepin
-  - Mint
+- Debian系列：Debian、Ubuntu、Deepin、Mint
 
-- SUSE系列
-  - opebSUSE
+- SUSE系列：opebSUSE
 
 - 其他系列
 
@@ -70,23 +59,21 @@ Linux内核的版本号命名是有一定规则的，版本号的格式通常为
 
 Linux提权一般是指获取root用户权限的操作过程。
 
-提权存在风险，提权操作需谨慎。不到万不得已不需要提权的情况下千万不要提权。
-
 **六、Linux提权目的**
 
 提权操作有风险为什么还要进行提权？什么情况下需要进行提权？获取高权限之后可以做什么？
 
 通过命令执行漏洞获取的一个反弹shell或是通过Web漏洞获取了一个Webshell后，一般情况下权限都较低。在执行一些重要敏感的操作或是对重要的文件进行修改时无法正常进行，便需要进行提权。Linux中安装的数据库、中间件等一般都不是以root用户启动的，通过数据库或是中间件获取到的权限是是低权限的。
 
-获取一个root权限是每个黑客的梦想。
+**获取一个root权限是每一个黑客的梦想。**
 
-- 读取写入服务器中的重要文件。
+- 读取写入服务器中的重要文件：
   - 修改root密码
   - 替换系统命令
-- 在系统中放置更为隐蔽的后门。
+- 在系统中放置更为隐蔽的后门：
   - ping后门
   - Rootkit
-- 保证服务器重启之后权限仍在。
+- 保证服务器重启之后权限仍在：
   - 内存后门
 
 **七、Linux提权本质**
