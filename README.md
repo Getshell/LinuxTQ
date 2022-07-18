@@ -1,7 +1,10 @@
-# Linux提权
-本项目用来记录自己在Linux提权过程中遇到的一些内容，包括提权方法提权工具等。Linux提权在后渗透过程中也较为重要，因为我们将会在此仓库持续更新Linux提权的相关内容！**提权有风险，提权需谨慎。不到非提不可的情况下千万不要尝试提权！** 作者：[0e0w](https://github.com/0e0w)
+# 《Linux提权方法论》
 
-本项目创建于2020年9月29日，最近的一次更新时间为2022年3月8日。
+![LinuxTQ](https://socialify.git.ci/Getshell/LinuxTQ/image?description=1&descriptionEditable=%E3%80%8ALinux%E6%8F%90%E6%9D%83%E6%96%B9%E6%B3%95%E8%AE%BA%E3%80%8B&font=Bitter&forks=1&issues=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Light)
+
+本项目用来记录自己在学习研究Linux提权过程中遇到的一些内容，包括提权漏洞原理或方法工具等。Linux提权在后渗透过程中较为重要，尤其是对于权限维持至关重要。因为我们将会在此仓库持续更新Linux提权的相关内容！**但提权有风险，提权需谨慎。不到非提不可的情况下千万不要尝试提权！** 作者：[0e0w](https://github.com/0e0w)
+
+本项目创建于2020年9月29日，最近的一次更新时间为2022年7月18日。
 
 - [01-Linux提权基础知识](https://github.com/Getshell/LinuxTQ#01-linux%E6%8F%90%E6%9D%83%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
 - [02-Linux内核漏洞提权](https://github.com/Getshell/LinuxTQ#02-linux%E5%86%85%E6%A0%B8%E6%BC%8F%E6%B4%9E%E6%8F%90%E6%9D%83)
@@ -14,14 +17,14 @@
 
 ## 01-Linux提权基础知识
 
-本部分介绍Linux的一些基础内容。包括Linux的基础使用、相关发行版本以及Linux提权的相关概念等。
+本部分介绍Linux提权的一些基础内容。包括Linux的基础使用、相关发行版本以及Linux提权的相关概念等。
 
 **一、Linux命令基础**
 - https://github.com/0e0w/Linux
 
 **二、Linux用户权限**
 
-在Linux中一个文件有3种权限。对文件而言用户有3种不同类型：文件所有者、群组用户、其他用户。chmod 777中，三个数字7分别对应上面三种用户，权限值都为7。
+在Linux中一个文件有3种权限。对文件而言用户有3种不同类型：文件所有者、群组用户、其他用户。例如：chmod 777中，三个数字7分别对应上面三种用户，权限值都为7。
 
 - 文件权限：
   - r 只读
@@ -265,6 +268,8 @@ Linux系统中可以使用sudo执行一个只有root才能执行的命令，配�
 
 ## 05-Linux免杀高级提权
 
+本部分对新手来说是难点。毕竟在安装了防护软件的Linux上进行提权操作需要一定的功力。但作为一个高级安全研究人员，应该时刻铭记，安全软件永远是一堆没用的废铁盒子！
+
 **一、Linux防护软件**
 - 安全狗 云垒
 - 奇安信 天擎
@@ -273,9 +278,11 @@ Linux系统中可以使用sudo执行一个只有root才能执行的命令，配�
 - [瑞星杀毒软件Linux全功能版](http://ep.rising.com.cn/xunihua/2017-02-20/18683.html)
 - 火绒EDR Linux版本
 - 深信服EDR Linux
+- 亚信EDR Linux
+- 参考：https://github.com/Goqi/AvHunt
 
 **二、免杀高级提权**
-- 略
+- 暂时略，待更新。
 
 ## 06-Linux内核高级后门
 
@@ -289,3 +296,5 @@ Linux系统中可以使用sudo执行一个只有root才能执行的命令，配�
 
 - https://github.com/Getshell/LinuxTQ
 - https://github.com/SecWiki/linux-kernel-exploits
+
+[![Stargazers over time](https://starchart.cc//Getshell/LinuxTQ.svg)](https://starchart.cc/Getshell/LinuxTQ)
