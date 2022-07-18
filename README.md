@@ -2,7 +2,7 @@
 
 ![LinuxTQ](https://socialify.git.ci/Getshell/LinuxTQ/image?description=1&descriptionEditable=%E3%80%8ALinux%E6%8F%90%E6%9D%83%E6%96%B9%E6%B3%95%E8%AE%BA%E3%80%8B&font=Bitter&forks=1&issues=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Light)
 
-本项目用来记录自己在学习研究Linux提权过程中遇到的一些内容，包括提权漏洞原理或方法工具等。Linux提权在后渗透过程中较为重要，尤其是对于权限维持至关重要。因为我们将会在此仓库持续更新Linux提权的相关内容！**但提权有风险，提权需谨慎。不到非提不可的情况下千万不要尝试提权！** 作者：[0e0w](https://github.com/0e0w)
+本项目用来记录自己在学习研究Linux提权过程中遇到的一些内容，包括提权漏洞原理或方法工具等。Linux提权在后渗透过程中较为重要，尤其是对于权限维持至关重要。因为=此我们将会在此仓库持续更新Linux提权的相关内容！**但提权有风险，提权需谨慎。不到非提不可的情况下千万不要尝试提权！** 作者：[0e0w](https://github.com/0e0w)
 
 本项目创建于2020年9月29日，最近的一次更新时间为2022年7月18日。
 
