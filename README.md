@@ -2,9 +2,9 @@
 
 ![LinuxTQ](https://socialify.git.ci/Getshell/LinuxTQ/image?description=1&descriptionEditable=%E3%80%8ALinux%E6%8F%90%E6%9D%83%E6%96%B9%E6%B3%95%E8%AE%BA%E3%80%8B&font=Bitter&forks=1&issues=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Light)
 
-本项目用来记录自己在学习研究Linux提权过程中遇到的一些内容，包括提权漏洞原理或方法工具等。Linux提权在后渗透过程中较为重要，尤其是对于权限维持至关重要。因为=此我们将会在此仓库持续更新Linux提权的相关内容！**但提权有风险，提权需谨慎。不到非提不可的情况下千万不要尝试提权！** 作者：[0e0w](https://github.com/0e0w)
+本项目用来记录自己在学习研究Linux提权过程中遇到的一些内容，包括提权漏洞原理或方法工具等。Linux提权在后渗透过程中较为重要，尤其是对于权限维持至关重要。因此我们将会在此仓库持续更新Linux提权的相关内容！**但提权有风险，提权需谨慎。不到非提不可的情况下千万不要尝试提权！** 作者：[0e0w](https://github.com/0e0w)
 
-本项目创建于2020年9月29日，最近的一次更新时间为2022年7月18日。
+本项目创建于2020年9月29日，最近的一次更新时间为2022年10月26日。
 
 - [01-Linux提权基础知识](https://github.com/Getshell/LinuxTQ#01-linux%E6%8F%90%E6%9D%83%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
 - [02-Linux内核漏洞提权](https://github.com/Getshell/LinuxTQ#02-linux%E5%86%85%E6%A0%B8%E6%BC%8F%E6%B4%9E%E6%8F%90%E6%9D%83)
@@ -68,7 +68,7 @@ Linux提权一般是指获取root用户权限的操作过程。
 
 通过命令执行漏洞获取的一个反弹shell或是通过Web漏洞获取了一个Webshell后，一般情况下权限都较低。在执行一些重要敏感的操作或是对重要的文件进行修改时无法正常进行，便需要进行提权。Linux中安装的数据库、中间件等一般都不是以root用户启动的，通过数据库或是中间件获取到的权限是是低权限的。
 
-**获取一个root权限是每一个黑客的梦想。**
+**获取root权限是每一个黑客的梦想。**
 
 - 读取写入服务器中的重要文件：
   - 修改root密码
@@ -130,8 +130,7 @@ Linux提权最主要的方式成功率最高最好的方式是利用内核漏洞
 **一、CVE-2016-5195**
 大名鼎鼎的脏牛(DirtyCow)提权漏洞。官网：https://dirtycow.ninja
 
-- 影响版本：
-  - Linux kernel >= 2.6.22（2007年发行，到2016年10月18日才修复）
+- 影响版本：Linux kernel >= 2.6.22（2007年发行，到2016年10月18日才修复）
   - https://help.aliyun.com/knowledge_detail/44786.html
 
 - 漏洞原理：在Linux内核的内存子系统处理私有只读内存映射的写时复制（COW）损坏的方式中发现了一种竞争状况。一个没有特权的本地用户可以使用此漏洞来获取对只读存储器映射的写访问权，从而增加他们在系统上的特权。
