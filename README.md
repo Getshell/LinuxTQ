@@ -4,7 +4,7 @@
 
 本项目用来记录自己在学习研究Linux提权过程中遇到的一些内容，包括提权漏洞原理或方法工具等。Linux提权在后渗透过程中较为重要，尤其是对于权限维持至关重要。因此我们将会在此仓库持续更新Linux提权的相关内容！**但提权有风险，提权需谨慎。不到非提不可的情况下千万不要尝试提权！** 作者：[0e0w](https://github.com/0e0w)
 
-本项目创建于2020年9月29日，最近的一次更新时间为2022年10月26日。
+本项目创建于2020年9月29日，最近的一次更新时间为2023年2月22日。
 
 - [01-Linux提权基础知识](https://github.com/Getshell/LinuxTQ#01-linux%E6%8F%90%E6%9D%83%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
 - [02-Linux内核漏洞提权](https://github.com/Getshell/LinuxTQ#02-linux%E5%86%85%E6%A0%B8%E6%BC%8F%E6%B4%9E%E6%8F%90%E6%9D%83)
@@ -161,6 +161,7 @@ Linux提权最主要的方式成功率最高最好的方式是利用内核漏洞
 - https://github.com/SecWiki/linux-kernel-exploits
 
 **六、内核漏洞提权参考**
+- https://github.com/Snoopy-Sec/Localroot-ALL-CVE
 - https://www.secice.cn/post/3574493e
 - CVE-2022-0847
 
